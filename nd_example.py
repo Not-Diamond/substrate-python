@@ -1,3 +1,13 @@
+"""
+Run this example to see the sketch for a RouteNotDiamond node.
+
+```bash
+pyenv virtualenv 3.11 substrate-nd-example
+pyenv activate substrate-nd-example
+pip install substrate
+python nd_example.py
+```
+"""
 import os
 
 from dotenv import load_dotenv
@@ -68,7 +78,9 @@ def route_quickstart():
     print(f"story={story.id}, summarize_4o={summarize_4o.id}, summarize_sonnet={summarize_sonnet.id}, summary={summary.id}")
 
     # print(substrate.visualize(summary))
-    response = substrate.run(summary)
+    # response = substrate.run(summary)
+    # print(response)
+    response = substrate.run(route)
     print(response)
 
 if __name__ == "__main__":
